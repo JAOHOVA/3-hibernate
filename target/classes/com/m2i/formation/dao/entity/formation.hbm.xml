@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.m2i.formation.dao.entity.Formation" table="T_FORMATION">
+		<id name="id" column="FORMATION_ID">
+			<generator class="native" />
+		</id>
+		<property name="theme" column="FORMATION_THEME" />
+		
+		<set name="formationTps" table="T_FORMATION_TP" cascade="all">
+		<key column="FORMATION_ID"/>
+		<many-to-many column="TP_ID" unique="true" class="com.m2i.formation.dao.entity.TravauxPratiques" />
+		</set>
+	</class>
+</hibernate-mapping>

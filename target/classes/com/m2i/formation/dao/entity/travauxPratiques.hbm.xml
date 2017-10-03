@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.m2i.formation.dao.entity.TravauxPratiques" table="T_TP">
+		<id name="tpId"  type="long" column="TP_ID">
+			<generator class="native" />
+		</id>
+		<property name="tpSubject"  type="string" length="50" column="TP_SUBJECT" />
+		<property name="tpDuration" type="long" length="10" column="TP_DURATION" />
+	</class>
+</hibernate-mapping>
